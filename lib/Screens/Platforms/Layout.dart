@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:porter/Screens/Home/home.dart';
 import 'package:porter/Screens/Platforms/Web.dart';
@@ -14,11 +12,7 @@ class Layout extends StatelessWidget {
     return LayoutBuilder(
         builder: (context, constraints) {
           if(constraints.maxWidth >websreensize){
-            if(Platform.isAndroid || Platform.isIOS){
-              return Home();
-            }
-            else{
-            return Webview();}
+            return Webview();
           }else{
             return Home();
           }
