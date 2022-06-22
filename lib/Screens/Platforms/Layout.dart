@@ -3,6 +3,7 @@ import 'package:porter/Screens/Home/home.dart';
 import 'package:porter/Screens/Platforms/Web.dart';
 import 'package:porter/shared/dim.dart';
 
+//Seperates the view for android and web based on screen size
 class Layout extends StatelessWidget {
 
   const Layout({Key? key}) : super(key: key);
