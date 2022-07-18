@@ -9,7 +9,7 @@ import 'package:flutter/widgets.dart';
 import 'package:porter/Models/Users1.dart';
 import 'package:porter/Services/Storagemethods.dart';
 import 'package:porter/Services/Upload.dart';
-import 'package:porter/shared/loading.dart';
+//import 'package:porter/shared/loading.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:provider/provider.dart';
@@ -66,9 +66,9 @@ int _page=0;
   
   @override
   Widget build(BuildContext context) {
-    try{
+   // try{
     User1 user1=  Provider.of<UserProvider>(context).getUser;
-    
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.lightBlue,
@@ -235,8 +235,8 @@ int _page=0;
           ],
       ),
     );
-    }catch(e){
-      return Loading();
-    }
+  //  }catch(e){
+  //    return Loading();
+  //  }
   }
 }
