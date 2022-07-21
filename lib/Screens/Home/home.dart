@@ -7,6 +7,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:porter/Models/Users1.dart';
+import 'package:porter/Screens/Home/Mobilepages/MPost.dart';
 import 'package:porter/Screens/Home/Mobilepages/Mhome.dart';
 import 'package:porter/Screens/Home/Mobilepages/Msearch.dart';
 import 'package:porter/Services/Storagemethods.dart';
@@ -242,7 +243,7 @@ class _HomeState extends State<Home> {
         children: [
           Mhome(),
           Msearch(),
-          Text("Home"),
+          Mpost(user1: user1),
           Text("Home"),
           Text("Home")
 
