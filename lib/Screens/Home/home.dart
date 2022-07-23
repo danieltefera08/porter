@@ -9,6 +9,7 @@ import 'package:flutter/widgets.dart';
 import 'package:porter/Models/Users1.dart';
 import 'package:porter/Screens/Home/Mobilepages/MPost.dart';
 import 'package:porter/Screens/Home/Mobilepages/Mhome.dart';
+import 'package:porter/Screens/Home/Mobilepages/Mnotifications.dart';
 import 'package:porter/Screens/Home/Mobilepages/Msearch.dart';
 import 'package:porter/Services/Storagemethods.dart';
 import 'package:porter/Services/Upload.dart';
@@ -305,7 +306,7 @@ class _HomeState extends State<Home> {
           Mhome(),
           Msearch(),
           Mpost(),
-          Text("Notification"),
+          Notifications(),
           Text("Messages")
 
         ],
