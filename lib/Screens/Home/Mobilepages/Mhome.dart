@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:porter/shared/Widgets/post_card.dart';
 
 
 class Mhome extends StatefulWidget {
@@ -12,7 +13,7 @@ class _MhomeState extends State<Mhome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+  body: PostCard(),
     );
   }
 }
