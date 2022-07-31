@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:porter/Screens/Home/Mobilepages/Mcomments_screen.dart';
 import 'package:porter/Services/Firestoremethods.dart';
 import 'package:porter/shared/Widgets/like_animation.dart';
 import 'package:intl/intl.dart';
@@ -234,7 +235,13 @@ likedf(authoruid, list);
                     ),
                     Text("12344"),
                     IconButton(
-                        onPressed: (){},
+                        onPressed: (){
+                          Navigator.of(context).push(
+                              MaterialPageRoute(
+                                  builder: (context)=>McommentsScreen()
+                              )
+                          );
+                        },
                         icon: Icon(
                           Icons.comment_outlined,
                           color: Colors.black,
