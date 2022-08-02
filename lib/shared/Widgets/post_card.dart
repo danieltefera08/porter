@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:porter/Screens/Home/Mobilepages/Mcomments_screen.dart';
 import 'package:porter/Services/Firestoremethods.dart';
@@ -75,7 +76,7 @@ int commentlen=0;
 
   getcommentlen()async{
     try{
-
+QuerySnapshot snapshot=await FirebaseFirestore.instance.collection("Posts").doc(widget.snap['Post Uid']).collection("comments").get();
     }
     catch(e){
       Showsnackbar(e.toString(), context);
