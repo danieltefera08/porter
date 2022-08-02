@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:porter/Screens/Home/Mobilepages/Mcomments_screen.dart';
 import 'package:porter/Services/Firestoremethods.dart';
+import 'package:porter/shared/Pop_up.dart';
 import 'package:porter/shared/Widgets/like_animation.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
@@ -72,7 +73,14 @@ int commentlen=0;
   }
 
 
-  getcommentlen()async{}
+  getcommentlen()async{
+    try{
+
+    }
+    catch(e){
+      Showsnackbar(e.toString(), context);
+    }
+  }
 
   void likedf(String authoruid,List list){
     setState(() {
