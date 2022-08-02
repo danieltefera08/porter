@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:porter/Services/Firestoremethods.dart';
 import 'package:porter/shared/Pop_up.dart';
@@ -54,6 +55,10 @@ text.dispose();
           ),
         ),
         centerTitle: true,
+      ),
+      body: StreamBuilder(
+        stream: FirebaseFirestore.instance.collection("Posts").doc(widget.snap['']).collection("comments").snapshots(),
+          builder: builder
       ),
       bottomNavigationBar: SafeArea(
           child: Container(
