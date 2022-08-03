@@ -6,13 +6,18 @@ import 'package:porter/shared/Widgets/post_card.dart';
 
 class WebHome extends StatefulWidget {
   const WebHome({Key? key}) : super(key: key);
-
   @override
   State<WebHome> createState() => _WebHomeState();
 }
 
 class _WebHomeState extends State<WebHome> {
+bool web=true;
 
+
+@override
+  void initState() {
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Container(
