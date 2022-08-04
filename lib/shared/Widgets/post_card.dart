@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:porter/Screens/Home/Mobilepages/Mcomments_screen.dart';
+import 'package:porter/Screens/Home/Mobilepages/Meditpost.dart';
 import 'package:porter/Services/Firestoremethods.dart';
 import 'package:porter/shared/Pop_up.dart';
 import 'package:porter/shared/Widgets/like_animation.dart';
@@ -37,7 +38,17 @@ class _PostCardState extends State<PostCard> {
                 padding: const EdgeInsets.all(15.0),
                 child: const Text("Edit Post"),
                 onPressed: (){
-                  if(kIsWeb){}else{}
+                  if(kIsWeb){
+
+                  }else{
+                    Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context)=>Mobeditpost(
+                            snap: widget.snap,
+                          ),
+                        )
+                    );
+                  }
                 },
               ),
               SimpleDialogOption(
