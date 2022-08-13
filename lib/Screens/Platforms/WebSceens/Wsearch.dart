@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:porter/Screens/Platforms/WebSceens/WprofileScreen.dart';
 import 'package:porter/shared/error_handling.dart';
 import '../../../Services/Searchmethods.dart';
 import '../../../shared/Widgets/post_card.dart';
@@ -82,7 +83,13 @@ bool loadin=false;
   Widget usercard(data){
     return GestureDetector(
       onTap: (){
-
+        Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context)=>Wprofile(
+                snap: data,
+              ),
+            )
+        );
       },
       child: Card(
         shape: RoundedRectangleBorder(
