@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:porter/Services/Searchmethods.dart';
+import 'package:porter/shared/Pop_up.dart';
 import 'package:porter/shared/Widgets/post_card.dart';
 
 class Msearch extends StatefulWidget {
@@ -133,7 +134,7 @@ class _MsearchState extends State<Msearch> {
             }else {
               initiatepostsearch(value);
             }}catch(e){
-
+Showsnackbar(e.toString(), context);
             }
             },
 
