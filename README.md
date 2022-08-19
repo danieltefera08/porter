@@ -1,10 +1,10 @@
-# porter
 
-\forum
+
+# Social Media app
 
 ## Getting Started
 
-A Forum Application project with flutter front-end UI and Firebase back-end.
+A Social Media Application project with flutter front-end UI and Firebase back-end.
 
 
 ## ScreenShots
