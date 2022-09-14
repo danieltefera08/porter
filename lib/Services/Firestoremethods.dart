@@ -1,6 +1,5 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:porter/Models/Chats.dart';
 import 'package:porter/Models/Comments.dart';
 import 'package:porter/Models/Notifs.dart';
 import 'package:porter/Models/Posts.dart';
