@@ -3,9 +3,12 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:porter/Models/Comments.dart';
 import 'package:porter/Models/Notifs.dart';
 import 'package:porter/Models/Posts.dart';
+import 'package:porter/Models/Requests.dart';
 import 'package:porter/Services/Storagemethods.dart';
 
 import 'package:uuid/uuid.dart';
+
+import '../Models/Chats.dart';
 
 class FirestoreMethods{
     final FirebaseFirestore _firestore=FirebaseFirestore.instance;
