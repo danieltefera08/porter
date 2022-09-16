@@ -12,6 +12,7 @@ import 'package:porter/Screens/Home/Mobilepages/Mnotifications.dart';
 import 'package:porter/Screens/Home/Mobilepages/Msearch.dart';
 import 'package:porter/Services/Storagemethods.dart';
 import 'package:porter/Services/Upload.dart';
+import 'package:porter/shared/Networkconnection.dart';
 //import 'package:porter/shared/loading.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:line_icons/line_icons.dart';
@@ -265,7 +266,7 @@ class _HomeState extends State<Home> {
                       fontSize: 22.0,
                       fontWeight: FontWeight.bold,
                       fontStyle: FontStyle.italic,
-color:Colors.white,
+                      color:Colors.white,
 
                     ),
                   ),
@@ -338,7 +339,7 @@ color:Colors.white,
       ),
     );
       }catch(e){
-      return Loading();
+      return Netcon();
     }
   }
 }
