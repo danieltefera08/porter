@@ -1,10 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:porter/Screens/Home/Mobilepages/Mpprofile_screen.dart';
 import 'package:porter/Services/Searchmethods.dart';
 import 'package:porter/shared/Pop_up.dart';
 import 'package:porter/shared/Widgets/post_card.dart';
-
-import 'Mprofilescreen.dart';
 
 class Msearch extends StatefulWidget {
   const Msearch({Key? key}) : super(key: key);
