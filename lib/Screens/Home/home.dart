@@ -10,9 +10,11 @@ import 'package:porter/Screens/Home/Mobilepages/Mhome.dart';
 import 'package:porter/Screens/Home/Mobilepages/Mmessages.dart';
 import 'package:porter/Screens/Home/Mobilepages/Mnotifications.dart';
 import 'package:porter/Screens/Home/Mobilepages/Msearch.dart';
+import 'package:porter/Services/Firestoremethods.dart';
 import 'package:porter/Services/Storagemethods.dart';
 import 'package:porter/Services/Upload.dart';
 import 'package:porter/shared/Networkconnection.dart';
+import 'package:porter/shared/Pop_up.dart';
 //import 'package:porter/shared/loading.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:line_icons/line_icons.dart';
@@ -260,8 +262,34 @@ class _HomeState extends State<Home> {
                   },
                 ),
                const SizedBox(height: 20.0,),
-
-
+               user1.Admin==true?  ListTile(
+             title: Text(
+                 "View Requests",
+             style: TextStyle(
+               fontStyle: FontStyle.italic,
+             ),
+             ),
+             onTap: (){
+               Navigator.of(context).push(
+                   MaterialPageRoute(
+                     builder: (context)=>Request_page(),
+                   )
+               );
+             },
+           ):
+           ListTile(
+             title: Text(
+               "Request Admin Privileges",
+               style: TextStyle(
+                 fontStyle: FontStyle.italic
+               ),
+             ),
+             onTap: ()async{
+               String content= await FirestoreMethods().Makerequest(user1.Username!, user1.UID!, user1.ppurl!);
+               Showsnackbar(content, context);
+             },
+           ),
+             const SizedBox(height: 120.0,),
               const  Divider(
                   height: 40,
                   color: Colors.white,
