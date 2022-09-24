@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:porter/Provider/user_provider.dart';
 import 'package:porter/Services/Firestoremethods.dart';
 import 'package:porter/Services/Upload.dart';
+import 'package:porter/shared/Pop_up.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 import '../../../Models/Users1.dart';
@@ -164,10 +165,10 @@ class _CreationState extends State<Creation> {
                               borderSide: const BorderSide(
                                   color: Colors.redAccent
                               ),
-                              borderRadius: BorderRadius.circular(100.0),
+                              borderRadius: BorderRadius.circular(50.0),
                             ),
                             enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(100.0),
+                              borderRadius: BorderRadius.circular(50.0),
 
                             ),
                           ),
@@ -186,8 +187,9 @@ class _CreationState extends State<Creation> {
                       )
                       ),
                     onPressed: ()async{
-                      if(_formKey.currentState!.validate()){
+                      if(_formKey.currentState?.validate()!=null){
                        String ress= await FirestoreMethods().CreateGroup(user1.UID!, user1.Username!, Group_name.text, Group_desc.text, image);
+                     Showsnackbar(ress, context);
                       }
                     },
                     style: ElevatedButton.styleFrom(
