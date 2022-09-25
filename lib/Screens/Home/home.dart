@@ -18,7 +18,6 @@ import 'package:porter/Services/Storagemethods.dart';
 import 'package:porter/Services/Upload.dart';
 import 'package:porter/shared/Networkconnection.dart';
 import 'package:porter/shared/Pop_up.dart';
-//import 'package:porter/shared/loading.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:provider/provider.dart';
