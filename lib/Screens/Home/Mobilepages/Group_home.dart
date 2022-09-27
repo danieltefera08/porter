@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:porter/Screens/Home/Mobilepages/Group_edit.dart';
 import 'package:porter/Services/Firestoremethods.dart';
 import 'package:porter/Services/Upload.dart';
 import 'package:porter/shared/Pop_up.dart';
@@ -146,7 +147,7 @@ _selectimage(BuildContext context)async{
                   onPressed: ()async{
                         Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context)=>Ghome(
+                                builder: (context)=>Gedit(
                                   snap: widget.snap,
                                 ),
                               )
