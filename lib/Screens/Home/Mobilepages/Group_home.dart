@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:porter/Screens/Home/Mobilepages/GMember_list.dart';
 import 'package:porter/Screens/Home/Mobilepages/Group_Post.dart';
+import 'package:porter/Screens/Home/Mobilepages/Group_chat.dart';
 import 'package:porter/Screens/Home/Mobilepages/Group_edit.dart';
 import 'package:porter/Services/Firestoremethods.dart';
 import 'package:porter/Services/Upload.dart';
@@ -90,7 +91,19 @@ _selectimage(BuildContext context)async{
             ),
             actions: [
               IconButton(
-                onPressed: (){},
+                onPressed: (){
+                  if(widget.snap['Members'].contains(user1.UID)==true){
+            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context)=>Gchatscreen(
+                                  snap: widget.snap,
+                                ),
+                              )
+                          );
+          }else{
+            Showsnackbar("Access Denied, please join group first", context);
+          }
+                },
                 icon: const FaIcon(
                   FontAwesomeIcons.message
                   ),
