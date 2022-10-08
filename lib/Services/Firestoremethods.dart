@@ -1,6 +1,7 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:porter/Models/Comments.dart';
+import 'package:porter/Models/Group_chat.dart';
 import 'package:porter/Models/Groups.dart';
 import 'package:porter/Models/Notifs.dart';
 import 'package:porter/Models/Posts.dart';
@@ -827,6 +828,15 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
     String ress;
     try{
       String message_uid=const Uuid().v1();
+      GChats groupchat1=GChats(
+        author_uid: author_uid,
+        message_uid: message_uid,
+        message: message,
+        Timeposted: DateTime.now(),
+        ppurl: ppurl,
+        groupid: groupid,
+        author: author
+        );
       ress="Message Sent";
       return ress;
     }catch(e){
