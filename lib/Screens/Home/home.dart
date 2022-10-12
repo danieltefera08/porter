@@ -8,6 +8,7 @@ import 'package:porter/Models/Users1.dart';
 import 'package:porter/Screens/Home/Mobilepages/Group_page.dart';
 import 'package:porter/Screens/Home/Mobilepages/Group_search.dart';
 import 'package:porter/Screens/Home/Mobilepages/MPost.dart';
+import 'package:porter/Screens/Home/Mobilepages/MSettings_oage.dart';
 import 'package:porter/Screens/Home/Mobilepages/Mhome.dart';
 import 'package:porter/Screens/Home/Mobilepages/Mmessages.dart';
 import 'package:porter/Screens/Home/Mobilepages/Mnotifications.dart';
@@ -305,7 +306,13 @@ class _HomeState extends State<Home> {
                         color: Colors.white,
                       )
                       ),
-                    onTap: ()async{},
+                    onTap: ()async{
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context)=>MSettings(),
+                        )
+                      );
+                    },
                 ),
               const  SizedBox(height: 5.0,),
                 ListTile(
