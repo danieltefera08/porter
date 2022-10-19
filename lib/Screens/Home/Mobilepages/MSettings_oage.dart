@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:porter/Models/Users1.dart';
 import 'package:porter/Provider/user_provider.dart';
 import 'package:porter/Services/Firestoremethods.dart';
+import 'package:porter/shared/Pop_up.dart';
 import 'package:provider/provider.dart';
 
 class MSettings extends StatefulWidget {
@@ -31,6 +32,7 @@ class _MSettingsState extends State<MSettings> {
           TextButton(
             onPressed: ()async{
              String content= await FirestoreMethods().UpdateSettings(user1.UID!);
+             Showsnackbar(content, context);
             },
              child: Text(
               "Save",
