@@ -1,6 +1,7 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:porter/Models/Settings.dart';
 import 'package:porter/Services/Storagemethods.dart';
 import '../Models/Users1.dart';
 
