@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:porter/Provider/Settings_provider.dart';
 import 'package:porter/Provider/user_provider.dart';
 import 'package:porter/Screens/Authenticate/reset.dart';
 import 'package:porter/Screens/Platforms/WebSceens/webprofile.dart';
@@ -37,6 +38,9 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (_)=> UserProvider(),
         ),
+        ChangeNotifierProvider(
+          create: (_)=> ThemeProvider(),
+          )
       ],
       child: MaterialApp(
         home: Wrapper(),
