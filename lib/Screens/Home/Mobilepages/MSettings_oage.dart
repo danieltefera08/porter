@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:porter/Models/Users1.dart';
 import 'package:porter/Provider/user_provider.dart';
+import 'package:porter/Screens/Home/Mobilepages/MSettings_Colors.dart';
 import 'package:porter/Services/Firestoremethods.dart';
 import 'package:porter/shared/Pop_up.dart';
 import 'package:porter/shared/Widgets/Animatedtogglebutton.dart';
@@ -75,7 +76,13 @@ class _MSettingsState extends State<MSettings> {
                 left:12.0
                 ),
               child: GestureDetector(
-                onTap: (){},
+                onTap: (){
+                  Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context)=>CustomThemePage(),
+                              )
+                          );
+                },
                 child: Row(
                   children: [
                     Text(
