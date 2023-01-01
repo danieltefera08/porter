@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:porter/Services/Firestoremethods.dart';
 import 'package:porter/shared/Pop_up.dart';
-import 'package:porter/shared/Widgets/Comment_card.dart';
 import 'package:porter/shared/Widgets/Groupcommentcard.dart';
 import 'package:provider/provider.dart';
 
@@ -161,8 +160,8 @@ text.dispose();
                     child: const Text("Post"),
                   style: ElevatedButton.styleFrom(
                       elevation: 0.0,
+                      backgroundColor: Colors.lightBlueAccent,
                       shadowColor: Colors.black,
-                      primary: Colors.lightBlueAccent,
                       side: const BorderSide(
                         color: Colors.white70,
                         width: 2.0,

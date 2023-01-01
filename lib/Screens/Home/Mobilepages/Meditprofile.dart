@@ -5,7 +5,6 @@ import 'package:porter/Models/Users1.dart';
 import 'package:porter/Services/Firestoremethods.dart';
 import 'package:porter/Services/Upload.dart';
 import 'package:porter/shared/Pop_up.dart';
-import 'package:porter/shared/error_handling.dart';
 import 'package:image_picker/image_picker.dart';
 
 
