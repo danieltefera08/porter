@@ -10,9 +10,7 @@ import 'package:porter/Models/Requests.dart';
 import 'package:porter/Models/Settings.dart';
 import 'package:porter/Models/Users1.dart';
 import 'package:porter/Services/Storagemethods.dart';
-
 import 'package:uuid/uuid.dart';
-
 import '../Models/Chats.dart';
 
 class FirestoreMethods{
