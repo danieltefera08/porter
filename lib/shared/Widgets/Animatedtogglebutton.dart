@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:porter/Provider/user_provider.dart';
 import 'package:porter/Services/Firestoremethods.dart';
 import 'package:porter/shared/Pop_up.dart';
-import 'package:provider/provider.dart';
-
-import '../../Models/Users1.dart';
 
 
 class Atogglebutton extends StatefulWidget {
