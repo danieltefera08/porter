@@ -1,10 +1,11 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:porter/Models/Settings.dart';
+import 'package:porter/Provider/Settings_provider.dart';
 import 'package:porter/Screens/Platforms/WebSceens/editcomment.dart';
 import 'package:porter/Services/Firestoremethods.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-
 import '../../Models/Users1.dart';
 import '../../Provider/user_provider.dart';
 import '../../Screens/Home/Mobilepages/Meditcomment.dart';
@@ -23,6 +24,8 @@ class _CommentcardState extends State<Commentcard> {
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
+
     return Container(
       padding: const EdgeInsets.symmetric(
         vertical: 0,
