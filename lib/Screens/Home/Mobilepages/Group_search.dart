@@ -1,8 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:porter/Models/Settings.dart';
+import 'package:porter/Provider/Settings_provider.dart';
 import 'package:porter/Screens/Home/Mobilepages/Group_home.dart';
 import 'package:porter/Services/Searchmethods.dart';
 import 'package:porter/shared/Pop_up.dart';
+import 'package:provider/provider.dart';
 
 class Groupsearch extends StatefulWidget {
   const Groupsearch({Key? key}) : super(key: key);
@@ -104,8 +107,9 @@ class _GroupsearchState extends State<Groupsearch> {
   }
   @override
   Widget build(BuildContext context) {
+    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(themedata.ScaffoldbackColor),
       appBar: AppBar(
         backgroundColor: Colors.black,
         elevation: 3.0,

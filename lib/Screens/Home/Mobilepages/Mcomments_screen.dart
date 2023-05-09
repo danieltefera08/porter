@@ -6,7 +6,6 @@ import 'package:porter/Services/Firestoremethods.dart';
 import 'package:porter/shared/Pop_up.dart';
 import 'package:porter/shared/Widgets/Comment_card.dart';
 import 'package:provider/provider.dart';
-
 import '../../../Models/Users1.dart';
 import '../../../Provider/user_provider.dart';
 
