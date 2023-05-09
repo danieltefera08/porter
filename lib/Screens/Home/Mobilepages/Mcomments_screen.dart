@@ -1,5 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:porter/Models/Settings.dart';
+import 'package:porter/Provider/Settings_provider.dart';
 import 'package:porter/Services/Firestoremethods.dart';
 import 'package:porter/shared/Pop_up.dart';
 import 'package:porter/shared/Widgets/Comment_card.dart';
@@ -66,18 +68,19 @@ text.dispose();
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
 
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(themedata.ScaffoldbackColor),
       appBar: AppBar(
-        iconTheme: const IconThemeData(
-          color: Colors.white,
+        iconTheme:  IconThemeData(
+          color: Color(themedata.AppbarbackColor),
         ),
-        backgroundColor: Colors.black,
-        title:const Text(
+        backgroundColor: Color(themedata.AppbarbackColor),
+        title: Text(
           "Discussion",
           style: TextStyle(
-            color: Colors.white,
+            color: Color(themedata.AppbartextColor),
           ),
         ),
         centerTitle: true,
