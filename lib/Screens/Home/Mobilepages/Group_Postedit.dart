@@ -4,7 +4,6 @@ import 'package:porter/Services/Firestoremethods.dart';
 import 'package:porter/shared/Pop_up.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
-
 import '../../../Models/Users1.dart';
 import '../../../Provider/user_provider.dart';
 import '../../../Services/Upload.dart';
