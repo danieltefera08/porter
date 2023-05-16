@@ -9,6 +9,7 @@ import 'package:porter/Models/Users1.dart';
 import 'package:porter/Provider/Settings_provider.dart';
 import 'package:porter/Screens/Home/Mobilepages/Group_page.dart';
 import 'package:porter/Screens/Home/Mobilepages/Group_search.dart';
+import 'package:porter/Screens/Home/Mobilepages/MDprofile.dart';
 import 'package:porter/Screens/Home/Mobilepages/MPost.dart';
 import 'package:porter/Screens/Home/Mobilepages/MSettings_oage.dart';
 import 'package:porter/Screens/Home/Mobilepages/Mhome.dart';
@@ -231,7 +232,11 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   onTap: () async{
-                    Navigator.pushNamed(context, '/Profile');
+                     Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context)=>MDprofile(),
+                      )
+                  );
                   },
                 ),
                 const SizedBox(height: 15,),
