@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:porter/Models/Settings.dart';
 import 'package:porter/Provider/Settings_provider.dart';
+import 'package:porter/shared/Widgets/dynamiccard.dart';
 import 'package:porter/shared/Widgets/post_card.dart';
 import 'package:provider/provider.dart';
 
@@ -28,7 +29,7 @@ class _dynamicpState extends State<dynamicp> {
               child: CircularProgressIndicator(),
             );
           }
-          return  PostCard(
+          return  dynamicCard(
             snap: snapshot.data!.docs[0].data(),
 
           );

@@ -1,7 +1,10 @@
 
 import 'package:flutter/material.dart';
+import 'package:porter/Models/Settings.dart';
+import 'package:porter/Provider/Settings_provider.dart';
 import 'package:porter/shared/Widgets/dynamic_Comment.dart';
 import 'package:porter/shared/Widgets/dynamic_post.dart';
+import 'package:provider/provider.dart';
 
 
 class dynamicHandler extends StatefulWidget {
@@ -15,6 +18,7 @@ class dynamicHandler extends StatefulWidget {
 class _dynamicHandlerState extends State<dynamicHandler> {
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
 appBar: AppBar(
   backgroundColor: Colors.white,
