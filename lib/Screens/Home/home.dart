@@ -3,12 +3,14 @@ import 'dart:ffi';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:porter/Models/Settings.dart';
 import 'package:porter/Models/Users1.dart';
 import 'package:porter/Provider/Settings_provider.dart';
+import 'package:porter/Screens/Forum/Dynamiclink_page.dart';
 import 'package:porter/Screens/Home/Mobilepages/Group_page.dart';
 import 'package:porter/Screens/Home/Mobilepages/Group_search.dart';
 import 'package:porter/Screens/Home/Mobilepages/MDprofile.dart';
@@ -24,6 +26,8 @@ import 'package:porter/Services/Storagemethods.dart';
 import 'package:porter/Services/Upload.dart';
 import 'package:porter/shared/Networkconnection.dart';
 import 'package:porter/shared/Pop_up.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/get_core.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:provider/provider.dart';
@@ -47,7 +51,29 @@ class _HomeState extends State<Home> {
   final User1? u2=User1();
   dynamic image;
   
- 
+ void initiateDynamiclink()async{
+    FirebaseDynamicLinks.instance.onLink(
+      onSuccess: (PendingDynamicLinkData? dynamicLink)async{
+        final Uri? deeplink= dynamicLink!.link;
+
+        if(deeplink!=null){
+          handlemylink(deeplink);
+        }
+      },
+      onError: (OnLinkErrorException e)async{
+print(e.toString());
+      }
+    );
+  }
+  
+  void handlemylink(Uri url){
+    List<String> seperatedlink=[];
+    seperatedlink.addAll(url.path.split('/'));
+    Get.to(()=>dynamicHandler(
+      postid: seperatedlink[1],
+    ));
+    print("The Token that i'm interesed in is ${seperatedlink[1]}");
+}
   
   void pic()async{
     image= await _upload.uploadpic(ImageSource.gallery);
