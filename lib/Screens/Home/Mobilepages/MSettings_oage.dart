@@ -10,6 +10,8 @@ import 'package:porter/shared/Pop_up.dart';
 import 'package:porter/shared/Widgets/Animatedtogglebutton.dart';
 import 'package:provider/provider.dart';
 
+//TODO: Link Custom Theme page for v1.0.2
+
 class MSettings extends StatefulWidget {
   const MSettings({ Key? key }) : super(key: key);
 
@@ -84,11 +86,12 @@ class _MSettingsState extends State<MSettings> {
                 ),
               child: GestureDetector(
                 onTap: (){
-                  Navigator.of(context).push(
+                 /* Navigator.of(context).push(
                               MaterialPageRoute(
                                 builder: (context)=>CustomThemePage(),
                               )
-                          );
+                          );*/
+                          Showsnackbar("Feature not available for this version", context);
                 },
                 child: Row(
                   children: [
