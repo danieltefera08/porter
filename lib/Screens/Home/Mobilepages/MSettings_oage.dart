@@ -4,7 +4,6 @@ import 'package:porter/Models/Settings.dart';
 import 'package:porter/Models/Users1.dart';
 import 'package:porter/Provider/Settings_provider.dart';
 import 'package:porter/Provider/user_provider.dart';
-import 'package:porter/Screens/Home/Mobilepages/MSettings_Colors.dart';
 import 'package:porter/Services/Firestoremethods.dart';
 import 'package:porter/shared/Pop_up.dart';
 import 'package:porter/shared/Widgets/Animatedtogglebutton.dart';

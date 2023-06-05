@@ -5,7 +5,6 @@ import 'package:porter/Provider/Settings_provider.dart';
 import 'package:porter/shared/Widgets/dynamiccoms.dart';
 import 'package:provider/provider.dart';
 
-import 'Comment_card.dart';
 
 class dynamicCom extends StatefulWidget {
   final postid;
