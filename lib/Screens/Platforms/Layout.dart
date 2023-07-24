@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:porter/Provider/Settings_provider.dart';
 import 'package:porter/Screens/Home/home.dart';
 import 'package:porter/Screens/Platforms/Web.dart';
-import 'package:porter/shared/dim.dart';
 import 'package:provider/provider.dart';
 import '../../Provider/user_provider.dart';
 

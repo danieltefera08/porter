@@ -43,7 +43,7 @@ class _GPostCardState extends State<GPostCard> {
         packageName: "com.tefera.social",
         minimumVersion: 0,
       ),
-      iosParameters: IosParameters(
+      iosParameters: IOSParameters(
         bundleId: "com.tefera.social",
         minimumVersion: '0',
         appStoreId: "000000000",
@@ -55,7 +55,7 @@ class _GPostCardState extends State<GPostCard> {
           Uri.parse("$image"),
           title: title),
     );
-    final ShortDynamicLink dynamicUrl = await parameters.buildShortLink();
+    final ShortDynamicLink dynamicUrl = await FirebaseDynamicLinks.instance.buildShortLink(parameters);
 
     String? desc = '${dynamicUrl.shortUrl.toString()}';
 

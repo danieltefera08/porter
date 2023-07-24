@@ -1,10 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:porter/Models/Settings.dart';
 import 'package:porter/Provider/Settings_provider.dart';
 import 'package:porter/Services/Encryption.dart';
-import 'package:porter/shared/Pop_up.dart';
 import 'package:porter/shared/error_handling.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';

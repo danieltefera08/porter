@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:porter/Models/Settings.dart';
 import 'package:porter/Provider/Settings_provider.dart';

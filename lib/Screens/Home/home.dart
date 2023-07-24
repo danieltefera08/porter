@@ -27,7 +27,6 @@ import 'package:porter/Services/Upload.dart';
 import 'package:porter/shared/Networkconnection.dart';
 import 'package:porter/shared/Pop_up.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/get_core.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:package_info_plus/package_info_plus.dart';
@@ -52,15 +51,15 @@ class _HomeState extends State<Home> {
   dynamic image;
   
  void initiateDynamiclink()async{
-    FirebaseDynamicLinks.instance.onLink(
-      onSuccess: (PendingDynamicLinkData? dynamicLink)async{
+    FirebaseDynamicLinks.instance.onLink.listen(
+       (PendingDynamicLinkData? dynamicLink)async{
         final Uri? deeplink= dynamicLink!.link;
 
         if(deeplink!=null){
           handlemylink(deeplink);
         }
       },
-      onError: (OnLinkErrorException e)async{
+      onError: (e)async{
         print(e.toString());
       }
     );
