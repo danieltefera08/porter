@@ -15,7 +15,7 @@ Planning to add user customizable themes alongside the standard light and dark t
 
 ## 🤗 Contributing
 
-Contributions are welcome! Feel free to open an issue or submit a pull request.
+Contributions are welcome! Feel free to open an issue or [submit](https://github.com/danieltefera08/porter/issues) a [pull request](https://github.com/danieltefera08/porter/pulls).
 
 ## ❗❗❗ IMPORTANT NOTICE
 
