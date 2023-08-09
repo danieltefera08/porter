@@ -208,3 +208,21 @@ git push -u origin <your_branch_name>
 - Congratulations! 🎉 Sit and relax, you've made your contribution to [Porter - A Social Media App](https://github.com/danieltefera08/porter). ✌️ ❤️ 💥
 
 
+## **Note**
+
+- New categories, or improvements to the existing categorisation, are always welcome.
+- If you have any idea or suggestions then check this [Discussion Tab](https://github.com/danieltefera08/porter/discussions). and put your [idea](https://github.com/danieltefera08/porter/discussions/categories/ideas) or [suggestions](https://github.com/danieltefera08/porter/discussions/categories/ideas)🏆
+
+### [`Welcome to Discussions!`](https://github.com/danieltefera08/porter/discussions)
+
+[Discussion Tab](https://github.com/danieltefera08/porter/discussions/categories/ideas)
+
+## Need more help?🤔
+
+You can refer to the following articles on basics of Git and Github and also contact the Project [Admin](https://github.com/danieltefera08), in case you are stuck:
+
+- [Forking a Repo](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
+- [Cloning a Repo](https://help.github.com/en/desktop/contributing-to-projects/creating-an-issue-or-pull-request)
+- [How to create a Pull Request](https://opensource.com/article/19/7/create-pull-request-github)
+- [Getting started with Git and GitHub](https://towardsdatascience.com/getting-started-with-git-and-github-6fcd0f2d4ac
+- 
