@@ -9,6 +9,7 @@ import 'package:porter/Screens/Authenticate/reset.dart';
 import 'package:porter/Screens/Platforms/WebSceens/webprofile.dart';
 import 'package:porter/Screens/SplasshScreen.dart';
 import 'package:get/get.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 import 'Models/Users1.dart';
 import 'Screens/Authenticate/Register.dart';
@@ -25,9 +26,20 @@ void main() async{
 
   );
 
+  try{
+    await _initGoogleMobileAds();
+  }catch(e){
+    print(e.toString());
+  }
+
   //Run App
   runApp(const MyApp());
 }
+Future<InitializationStatus> _initGoogleMobileAds() {
+    // TODO: Initialize Google Mobile Ads SDK
+    return MobileAds.instance.initialize();
+  }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
