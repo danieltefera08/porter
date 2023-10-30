@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:porter/Ads/ad_helper.dart';
 import 'package:porter/Models/Settings.dart';
 import 'package:porter/Provider/Settings_provider.dart';
 import 'package:porter/Screens/Home/Mobilepages/GMember_list.dart';
@@ -11,6 +12,7 @@ import 'package:porter/Services/Firestoremethods.dart';
 import 'package:porter/Services/Upload.dart';
 import 'package:porter/shared/Pop_up.dart';
 import 'package:porter/shared/Widgets/Gpostcard.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 import '../../../Models/Users1.dart';
@@ -29,6 +31,7 @@ class _GhomeState extends State<Ghome> {
 dynamic image;
 late bool memstate;
   final Upload Selection=Upload();
+BannerAd? _bannerAd;
 
 @override
 void didChangeDependencies() {
@@ -36,6 +39,30 @@ void didChangeDependencies() {
   setState(() {
     
   });
+}
+
+@override
+void initState() {
+  // TODO: Load a banner ad
+  BannerAd(
+    adUnitId: AdHelper.bannerAdUnitId,
+    request: AdRequest(),
+    size: AdSize.banner,
+    listener: BannerAdListener(
+      onAdLoaded: (ad) {
+        setState(() {
+          _bannerAd = ad as BannerAd;
+        });
+      },
+      onAdFailedToLoad: (ad, err) {
+        print('Failed to load a banner ad: ${err.message}');
+        ad.dispose();
+      },
+    ),
+  ).load();
+
+  super.initState();
+  
 }
 
 _selectimage(BuildContext context)async{

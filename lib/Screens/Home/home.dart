@@ -27,6 +27,7 @@ import 'package:porter/Services/Upload.dart';
 import 'package:porter/shared/Networkconnection.dart';
 import 'package:porter/shared/Pop_up.dart';
 import 'package:get/get.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:package_info_plus/package_info_plus.dart';
@@ -97,6 +98,8 @@ class _HomeState extends State<Home> {
   late String packageName;
   late String version;
   late String buildNumber;
+    
+
 
   void getappinfo()async{
     PackageInfo packageInfo = await PackageInfo.fromPlatform();
