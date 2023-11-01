@@ -4,9 +4,11 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:porter/Models/Settings.dart';
 import 'package:porter/Provider/Settings_provider.dart';
 import 'package:porter/shared/Widgets/post_card.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 
 //TODO: Create theme fields for dialog options
+//TODO: Implement ads after every 5 or 10 post
 class Mhome extends StatefulWidget {
   const Mhome({Key? key}) : super(key: key);
 
@@ -16,6 +18,14 @@ class Mhome extends StatefulWidget {
 
 class _MhomeState extends State<Mhome> {
 late String sortby="Post Time";
+BannerAd? _bannerAd;
+
+
+@override
+  void dispose() {
+    _bannerAd?.dispose();
+    super.dispose();
+  }
 
  _options(BuildContext context)async{
     return showDialog(
