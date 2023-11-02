@@ -39,7 +39,8 @@ currently in development and is not yet ready for production.
 
 - [Latest Downloads available](https://github.com/danieltefera08/porter/releases)
 
-##   Current Features
+## ✅ Current Features
+
 - [X] Authentication
 - [X] Multiple Themes (more to follow)
 - [X] Private Chats
