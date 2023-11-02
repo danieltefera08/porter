@@ -1,7 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:porter/Models/Settings.dart';
+import 'package:porter/Models/Users1.dart';
 import 'package:porter/Provider/Settings_provider.dart';
+import 'package:porter/Provider/user_provider.dart';
 import 'package:porter/Services/Firestoremethods.dart';
 import 'package:porter/shared/Pop_up.dart';
 import 'package:intl/intl.dart';
@@ -20,6 +22,7 @@ class _RequestCardState extends State<RequestCard> {
   @override
   Widget build(BuildContext context) {
         late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
+        late  User1 user1=  Provider.of<UserProvider>(context).getUser;
          final Timestamp timestamp = widget.snap['Request Time'] as Timestamp;
     final DateTime dateTime = timestamp.toDate();
     final dateString = DateFormat('K:mm a').format(dateTime);
@@ -79,7 +82,7 @@ class _RequestCardState extends State<RequestCard> {
                 children: [
                   TextButton(
                       onPressed: ()async{
-                        String ress= await FirestoreMethods().Approval(widget.snap['author uid']);
+                        String ress= await FirestoreMethods().Approval(widget.snap['author uid'],user1);
                         Showsnackbar(ress, context);
                       },
                       child:  Text(
@@ -92,7 +95,7 @@ class _RequestCardState extends State<RequestCard> {
                  const SizedBox(width: 15,),
                   TextButton(
                       onPressed: ()async{
-                        String content=await FirestoreMethods().DenyRequest(widget.snap['author uid']);
+                        String content=await FirestoreMethods().DenyRequest(widget.snap['author uid'],user1);
                         Showsnackbar(content, context);
                       },
                       child: Text(
