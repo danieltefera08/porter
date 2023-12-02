@@ -11,6 +11,7 @@ import 'package:porter/Models/Settings.dart';
 import 'package:porter/Models/Users1.dart';
 import 'package:porter/Provider/Settings_provider.dart';
 import 'package:porter/Screens/Forum/Dynamiclink_page.dart';
+import 'package:porter/Screens/Home/Mobilepages/Group_explore.dart';
 import 'package:porter/Screens/Home/Mobilepages/Group_page.dart';
 import 'package:porter/Screens/Home/Mobilepages/Group_search.dart';
 import 'package:porter/Screens/Home/Mobilepages/MDprofile.dart';
@@ -27,7 +28,6 @@ import 'package:porter/Services/Upload.dart';
 import 'package:porter/shared/Networkconnection.dart';
 import 'package:porter/shared/Pop_up.dart';
 import 'package:get/get.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:package_info_plus/package_info_plus.dart';
@@ -359,6 +359,29 @@ class _HomeState extends State<Home> {
                     },
                 ),
                const SizedBox(
+                height: 5.0,
+                ),ListTile(
+                  leading:  FaIcon(
+                    FontAwesomeIcons.compass,
+                    color: Color(themedata.DrawerIconColor!),
+                    size:35.0,
+                    ),
+                    title:  Text(
+                      "Explore Colonies",
+                      style:TextStyle(
+                        color: Color(themedata.DrawerTextColor!),
+                        fontSize: 22.0,
+                      )
+                      ),
+                    onTap: ()async{
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context)=>GroupExplore(),
+                        )
+                      );
+                    },
+                ),
+                SizedBox(
                 height: 5.0,
                 ),
                 ListTile(
