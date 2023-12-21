@@ -22,7 +22,7 @@ currently in development and is not yet ready for production.
 ## 🤗 Contributing
 
 - Contributions are welcome! If you would like to contribute, please read the
-[contribution guidelines](CONTRIBUTING.md) 
+[contribution guidelines](CONTRIBUTING.md).
 - Feel free to open an [issue](https://github.com/danieltefera08/porter/issues) or submit a [pull request](https://github.com/danieltefera08/porter/pulls).
 - We are also open to design suggestions. If you would like to suggest a design, feel free to open an [issue](https://github.com/danieltefera08/porter/issues).
 
